@@ -68,40 +68,6 @@ const Dashboard = () => {
     }
   };
 
-  const addSampleData = async () => {
-    if (!window.confirm('Add sample income and expense data for testing?')) return;
-    
-    setLoading(true);
-    try {
-      // Add sample income
-      const sampleIncome = {
-        source: 'Salary',
-        amount: 5000,
-        date: new Date().toISOString().split('T')[0]
-      };
-      await database.addIncome(sampleIncome);
-      
-      // Add sample expenses
-      const sampleExpenses = [
-        { category: 'Food & Dining', description: 'Grocery Shopping', amount: 300, date: new Date().toISOString().split('T')[0] },
-        { category: 'Utilities', description: 'Electricity Bill', amount: 150, date: new Date().toISOString().split('T')[0] },
-        { category: 'Transportation', description: 'Fuel', amount: 100, date: new Date().toISOString().split('T')[0] }
-      ];
-      
-      for (const expense of sampleExpenses) {
-        await database.addExpense(expense);
-      }
-      
-      alert('Sample data added successfully! Refreshing...');
-      window.location.reload();
-    } catch (error) {
-      console.error('Error adding sample data:', error);
-      alert('Error adding sample data: ' + error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   if (loading) {
     return (
       <div className="card" style={{ textAlign: 'center', padding: '40px' }}>
@@ -122,17 +88,6 @@ const Dashboard = () => {
         <p style={styles.userInfo}>
           Logged in as: <strong>{user?.email || 'Unknown'}</strong>
         </p>
-      </div>
-
-      <div style={styles.actions}>
-        <button 
-          onClick={addSampleData}
-          className="btn btn-info"
-          style={styles.sampleButton}
-          disabled={loading}
-        >
-          Add Sample Data
-        </button>
       </div>
 
       <div style={styles.statsGrid}>
@@ -192,13 +147,14 @@ const Dashboard = () => {
             <p style={{ fontSize: '14px', color: '#666', marginTop: '10px' }}>
               Start by adding your first income or expense
             </p>
-            <button 
-              onClick={addSampleData}
-              className="btn btn-primary"
-              style={{ marginTop: '15px' }}
-            >
-              Add Sample Data
-            </button>
+            <div style={styles.actions}>
+              <Link to="/income" className="btn btn-success" style={styles.actionButton}>
+                <span style={{ marginRight: '5px' }}>+</span> Add Income
+              </Link>
+              <Link to="/expenses" className="btn btn-danger" style={styles.actionButton}>
+                <span style={{ marginRight: '5px' }}>-</span> Add Expense
+              </Link>
+            </div>
           </div>
         ) : (
           <>
@@ -247,17 +203,19 @@ const Dashboard = () => {
           </>
         )}
         
-        <div style={styles.actions}>
-          <Link to="/income" className="btn btn-success" style={styles.actionButton}>
-            <span style={{ marginRight: '5px' }}>+</span> Add Income
-          </Link>
-          <Link to="/expenses" className="btn btn-danger" style={styles.actionButton}>
-            <span style={{ marginRight: '5px' }}>-</span> Add Expense
-          </Link>
-          <Link to="/budgets" className="btn btn-primary" style={styles.actionButton}>
-            📋 Manage Budgets
-          </Link>
-        </div>
+        {recentTransactions.length > 0 && (
+          <div style={styles.actions}>
+            <Link to="/income" className="btn btn-success" style={styles.actionButton}>
+              <span style={{ marginRight: '5px' }}>+</span> Add Income
+            </Link>
+            <Link to="/expenses" className="btn btn-danger" style={styles.actionButton}>
+              <span style={{ marginRight: '5px' }}>-</span> Add Expense
+            </Link>
+            <Link to="/budgets" className="btn btn-primary" style={styles.actionButton}>
+              📋 Manage Budgets
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -280,16 +238,6 @@ const styles = {
   userInfo: {
     fontSize: '14px',
     color: '#888',
-  },
-  actions: {
-    display: 'flex',
-    gap: '15px',
-    marginBottom: '20px',
-    flexWrap: 'wrap',
-  },
-  sampleButton: {
-    backgroundColor: '#06b6d4',
-    borderColor: '#06b6d4',
   },
   spinner: {
     width: '40px',
@@ -434,12 +382,19 @@ const styles = {
     marginBottom: '20px',
     fontSize: '14px',
   },
+  actions: {
+    display: 'flex',
+    gap: '15px',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
   actionButton: {
     textDecoration: 'none',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '12px 20px',
+    minWidth: '140px',
   },
 };
 
