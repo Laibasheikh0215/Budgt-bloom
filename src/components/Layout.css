@@ -1,0 +1,131 @@
+/* Layout.css */
+
+/* Reset aur basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Main app container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #212121 !important; /* !important use karein temporary */
+  padding: 15px 0 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  margin: 0 80px !important;
+  border-radius: 20px !important;
+  margin-top: 10px !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Navlink hover effect */
+.nav-link {
+  color: #F5F5F5;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #FF5722;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #FF5722;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.logout-button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #e64a19;
+}
+
+.user-email {
+  color: #BDBDBD;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 30px 0;
+  min-height: calc(100vh - 160px);
+}
+
+/* Footer */
+.footer {
+  background-color: #212121;
+  color: #F5F5F5;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 80px 10px 80px;
+  border-radius: 20px;
+}
+
+.footer-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
