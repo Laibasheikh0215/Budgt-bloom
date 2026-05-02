@@ -243,7 +243,7 @@ const styles = {
     width: '40px',
     height: '40px',
     border: '4px solid #F5F5F5',
-    borderTop: '4px solid #2196F3',
+    borderTop: '4px solid #085b6f',
     borderRadius: '50%',
     animation: 'spin 1s linear infinite',
     margin: '0 auto 20px',
@@ -275,7 +275,7 @@ const styles = {
     marginBottom: '15px',
   },
   viewLink: {
-    color: '#2196F3',
+    color: '#085b6f',
     textDecoration: 'none',
     fontSize: '14px',
     display: 'inline-block',

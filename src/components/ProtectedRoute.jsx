@@ -46,7 +46,7 @@ const styles = {
     width: '50px',
     height: '50px',
     border: '4px solid #F5F5F5',
-    borderTop: '4px solid #2196F3',
+    borderTop: '4px solid #085b6f',
     borderRadius: '50%',
     animation: 'spin 1s linear infinite',
   },

@@ -23,7 +23,7 @@
   width: 50px;
   height: 50px;
   border: 4px solid #e2e8f0;
-  border-top: 4px solid #3b82f6;
+  border-top: 4px solid #085b6f;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto 20px;
@@ -80,8 +80,7 @@
 
 .logo-emoji {
   font-size: 32px;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
+  background: linear-gradient(135deg, #085b6f 0%, #8b5cf6 100%);
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
@@ -100,7 +99,7 @@
 }
 
 .logo-secondary {
-  color: #3b82f6;
+  color: #085b6f;
   font-size: 20px;
   font-weight: 800;
 }
@@ -191,13 +190,13 @@
 }
 
 .nav-item:hover {
-  color: #3b82f6;
-  background-color: rgba(59, 130, 246, 0.05);
+  color: #085b6f;
+  background-color: rgba(13, 93, 111, 0.05);
   transform: translateY(-1px);
 }
 
 .nav-item.active {
-  color: #3b82f6;
+  color: #085b6f;
   background-color: rgba(59, 130, 246, 0.1);
   font-weight: 600;
 }
@@ -218,7 +217,7 @@
   transform: translateX(-50%);
   width: 4px;
   height: 4px;
-  background-color: #3b82f6;
+  background-color: #085b6f;
   border-radius: 50%;
 }
 
@@ -242,7 +241,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #3b82f6;
+  background-color: #085b6f;
   color: white;
   display: flex;
   align-items: center;
@@ -329,7 +328,7 @@
 
 .footer-logo-icon {
   font-size: 24px;
-  color: #60a5fa;
+  color: #085b6f;
 }
 
 .footer-logo-image {
@@ -365,7 +364,7 @@
 }
 
 .footer-link:hover {
-  color: #60a5fa;
+  color: #085b6f;
 }
 
 .footer-divider {

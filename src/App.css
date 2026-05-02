@@ -91,7 +91,7 @@ html {
 
 .form-control:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: #085b6f;
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
 }
 
@@ -150,12 +150,12 @@ html {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #085b6f 0%, #0891b2 100%);
   color: white;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, #085b6f 0%, #0891b2 100%);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
 }
@@ -183,12 +183,12 @@ html {
 }
 
 .btn-info {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #085b6f 0%, #0891b2 100%);
   color: white;
 }
 
 .btn-info:hover {
-  background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+  background: linear-gradient(135deg, #085b6f 0%, #0e7490 100%);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
 }
@@ -277,7 +277,7 @@ html {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #085b6f 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -441,7 +441,7 @@ const styles = {
   summaryTitle: {
     fontSize: '20px',
     marginBottom: '15px',
-    color: '#2196F3',
+    color: '#085b6f',
     textAlign: 'center',
   },
   summaryStats: {
@@ -510,7 +510,7 @@ const styles = {
     color: '#666',
   },
   countBadge: {
-    backgroundColor: '#2196F3',
+    backgroundColor: '#085b6f',
     color: 'white',
     padding: '5px 15px',
     borderRadius: '20px',
@@ -667,7 +667,7 @@ const styles = {
   },
   tipTitle: {
     fontSize: '16px',
-    color: '#2196F3',
+    color: '#085b6f',
     marginBottom: '10px',
   },
   tipP: {
@@ -683,7 +683,7 @@ const styles = {
     width: '40px',
     height: '40px',
     border: '4px solid #F5F5F5',
-    borderTop: '4px solid #2196F3',
+    borderTop: '4px solid #085b6f',
     borderRadius: '50%',
     animation: 'spin 1s linear infinite',
     margin: '0 auto 20px',
@@ -693,7 +693,7 @@ const styles = {
     padding: '40px',
   },
   loginButton: {
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#085b6f',
     color: 'white',
     border: 'none',
     padding: '10px 20px',

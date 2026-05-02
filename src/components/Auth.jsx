@@ -179,8 +179,7 @@ const handleSubmit = async (e) => {
             <div style={styles.formHeader}>
               {logoError ? (
                 <div style={styles.formLogoFallback}>
-                  <span style={styles.formLogoIcon}>💰</span>
-                  <span style={styles.formLogoText}>BudgetPlanner</span>
+                  <span style={styles.formLogoText}>Budget Planner</span>
                 </div>
               ) : (
                 <div style={styles.formLogo}>
@@ -371,7 +370,7 @@ const styles = {
   },
   leftSide: {
     flex: 1,
-    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    background: 'linear-gradient(135deg, #085b6f 0%, #8b5cf6 100%)',
     padding: '50px 40px',
     color: 'white',
     display: 'flex',
@@ -483,7 +482,7 @@ const styles = {
   },
   formLogoIcon: {
     fontSize: '28px',
-    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    background: 'linear-gradient(135deg, #085b6f 0%, #8b5cf6 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
   },
@@ -592,7 +591,7 @@ const styles = {
   submitButton: {
     width: '100%',
     padding: '18px',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#085b6f',
     color: 'white',
     border: 'none',
     borderRadius: '12px',
@@ -648,7 +647,7 @@ const styles = {
     marginBottom: '10px',
   },
   switchLink: {
-    color: '#3b82f6',
+    color: '#085b6f',
     textDecoration: 'none',
     fontSize: '16px',
     fontWeight: '600',
@@ -668,7 +667,7 @@ const styles = {
     lineHeight: 1.5,
   },
   termsLink: {
-    color: '#3b82f6',
+    color: '#085b6f',
     textDecoration: 'none',
     margin: '0 3px',
   },

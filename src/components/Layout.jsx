@@ -85,7 +85,13 @@ const Layout = ({ children }) => {
           // Image logo
           <div style={styles.imageLogoContainer}>
             <img 
-              src="/assets/logos/logo.png" 
+              src="/assets/logos/logo_planner 1.png" 
+              alt="Budget Planner" 
+              style={styles.logoImage}
+              onError={() => setLogoError(true)}
+            />
+            <img 
+              src="/assets/logos/logo_planner 2.png" 
               alt="Budget Planner" 
               style={styles.logoImage}
               onError={() => setLogoError(true)}
@@ -265,6 +271,7 @@ const NavItem = ({ to, label, icon, isActive, onClick }) => (
 );
 
 const styles = {
+  
   app: {
     minHeight: '100vh',
     display: 'flex',
@@ -285,7 +292,7 @@ const styles = {
     width: '50px',
     height: '50px',
     border: '4px solid #e2e8f0',
-    borderTop: '4px solid #3b82f6',
+    borderTop: '4px solid #085b6f',
     borderRadius: '50%',
     animation: 'spin 1s linear infinite',
     margin: '0 auto 20px',
@@ -330,7 +337,7 @@ const styles = {
   },
   logoEmoji: {
     fontSize: '32px',
-    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    background: 'linear-gradient(135deg, #085b6f 0%, #8b5cf6 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     fontWeight: 'bold',
@@ -347,7 +354,7 @@ const styles = {
     fontSize: '18px',
   },
   logoSecondary: {
-    color: '#3b82f6',
+    color: '#085b6f',
     fontSize: '20px',
     fontWeight: '800',
   },
@@ -460,12 +467,12 @@ const styles = {
     overflow: 'hidden',
   },
   navItemHover: {
-    color: '#3b82f6',
+    color: '#085b6f',
     backgroundColor: 'rgba(59, 130, 246, 0.05)',
     transform: 'translateY(-1px)',
   },
   navItemActive: {
-    color: '#3b82f6',
+    color: '#085b6f',
     backgroundColor: 'rgba(59, 130, 246, 0.1)',
     fontWeight: '600',
   },
@@ -483,7 +490,7 @@ const styles = {
     transform: 'translateX(-50%)',
     width: '4px',
     height: '4px',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#085b6f',
     borderRadius: '50%',
   },
   userSection: {
@@ -511,7 +518,7 @@ const styles = {
     width: '36px',
     height: '36px',
     borderRadius: '50%',
-    backgroundColor: '#3b82f6',
+    backgroundColor: '#085b6f',
     color: 'white',
     display: 'flex',
     alignItems: 'center',
@@ -586,7 +593,7 @@ const styles = {
   },
   footerLogoIcon: {
     fontSize: '24px',
-    color: '#60a5fa',
+    color: '#085b6f',
   },
   footerLogoImage: {
     height: '30px',
@@ -616,7 +623,7 @@ const styles = {
     transition: 'color 0.2s',
   },
   footerLinkHover: {
-    color: '#60a5fa',
+    color: '#085b6f',
   },
   footerDivider: {
     color: '#475569',
@@ -632,6 +639,7 @@ const addGlobalStyles = () => {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
+        
       
       /* Mobile styles */
       @media (max-width: 768px) {
@@ -699,6 +707,7 @@ const addGlobalStyles = () => {
         }
       }
       
+      
       /* Desktop styles */
       @media (min-width: 769px) {
         .menu-toggle {
@@ -712,7 +721,7 @@ const addGlobalStyles = () => {
       
       /* Hover effects */
       .nav-item:hover {
-        color: #3b82f6;
+        color: #085b6f;
         background-color: rgba(59, 130, 246, 0.05);
         transform: translateY(-1px);
       }
@@ -724,7 +733,7 @@ const addGlobalStyles = () => {
       }
       
       .footer-link:hover {
-        color: #60a5fa;
+        color: #085b6f;
       }
     `;
     document.head.appendChild(style);
